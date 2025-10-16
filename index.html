@@ -7,119 +7,140 @@
   <link rel="stylesheet" href="styles.css" />
   <style>
     :root {
-     --accent: #0ea5a4;
+  --accent: #0ea5a4;
   --bg: #f7fafc;
   --card: #ffffff;
   --text: #00008b;
   --muted: #00008b;
     }
 
-   .container{
-     max-width:980px;
-     margin:36px auto;
-     padding:0 20px;
-   }
-header.site-header{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:24px 0;
-}
-.site-title{
-  font-size:1.25rem;
-  font-weight:700;
-  letter-spacing:0.2px;
-}
-nav a{
-  color:var(--muted);
-  text-decoration:none;
-  margin-left:5px;
-  font-weight:600
-}
-.hero{
-  background:linear-gradient(180deg, rgba(14,165,164,0.08), transparent);
-  padding:28px;
-  border-radius:12px;
-  display:flex;
-  gap:20px;
-  align-items:center;
-}
-.avatar{
-  width:96px;
-  height:96px;
-  border-radius:12px;
-  background:linear-gradient(135deg,var(--accent),#7dd3fc);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  font-weight:700;font-size:28px;
-}
-.hero .meta{
-  flex:1
-}
-.section{
-  background-color: var(--bg);
-  margin-top:22px;background:var(--card);
-  padding:20px;
-  border-radius:10px;
-  box-shadow:0 6px 18px rgba(15,23,42,0.06);
-}
-.section h2{
-  margin:0 0 10px 0;
-  font-size:1.1rem
-}
-.projects-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:16px;
-}
-.card{
-  background:#fbfdff;
-  padding:14px;
-  border-radius:8px;
-  border:1px solid rgba(15,23,42,0.03);
-}
-.card h3{
-  margin:0 0 8px 0;
-  font-size:1rem;
-}
-.card p{
-  margin:0;
-  font-size:0.9rem;
-  color:var(--muted);
-}
-.button{
-  width: auto;
-  border: 2px solid rgba(255,255,255,0.447);
-  backdrop-filter: blur(11px); 
-  display:inline-block;
-  align-items: center; 
-  padding:30px 40px;
-  border-radius:20px;background:#0b74ff;
-  color:#fff;
-  text-decoration:none;
-  font-weight:600;
-  margin-top:10px;
-}
-.contact-form{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-}
-.input, textarea{
-  padding:10px;
-  border-radius:8px;
-  border:1px solid #e6eef0;
-  font-size:0.95rem
-}
-footer{
-  margin:28px 0;
-  text-align:center;
-  color:var(--muted);
-  font-size:0.9rem
-}
-@media (max-width:600px){.hero{flex-direction:column;align-items:flex-start}.site-title{font-size:1rem}}
+    body {
+      background-color: #36454F;
+      color: var(--text);
+      font-family: "Inter", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 980px;
+      margin: 36px auto;
+      padding: 0 20px;
+    }
+
+    header.site-header {
+     display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:24px 0;
+    }
+
+    .site-title {
+      font-size:1.25rem;
+      font-weight:700;
+      letter-spacing:0.2px;
+    }
+
+    nav a {
+    color:var(--muted);
+      text-decoration:none;
+      margin-left:5px;
+      font-weight:600;
+    }
+
+    .section {
+     background-color: var(--bg);
+      margin-top:22px;
+      background:var(--card);
+      padding:20px;
+      border-radius:10px;
+      box-shadow:0 6px 18px rgba(15,23,42,0.06);
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .avatar {
+      background: var(--accent);
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.8rem;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .meta h1 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .button {
+      display: inline-block;
+      background: #0000ff;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: #0000ff;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background:#fbfdff;
+      border-radius: 12px;
+      padding: 1.5rem;
+    
+    }
+
+    .card h3, .card h2 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    .card p {
+      color: var(--text);
+    }
+
+    img {
+      border-radius: 8px;
+      margin: 8px;
+    }
+
+    @media (max-width: 600px) {
+      header.site-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .meta {
+        max-width: 100%;
       }
     }
   </style>
@@ -145,7 +166,7 @@ footer{
         </p>
         <div style="margin-top:12px;">
           <a class="button" href="Portfolio_2025.pdf" download>Download PDF Portfolio</a>
-          <a class="button" href="Resume2025.pdf" download style="background: var(--accent); margin-left: 8px;">Download Resume (PDF)</a>
+          <a class="button" href="Resume2025.pdf" download style="background: #0000ff; margin-left: 8px;">Download Resume (PDF)</a>
           <a class="button" href="https://ccruz429.github.io/CJTechServices/">CJ's Tech Services</a>
         </div>
       </div>
