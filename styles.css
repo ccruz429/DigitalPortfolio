@@ -1,0 +1,34 @@
+/* redesigned styles.css - modern, minimal */
+:root{
+  --accent: #0ea5a4;
+  --bg: #f7fafc;
+  --card: #ffffff;
+  --text: #00008b;
+  --muted: #00008b;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg);
+  color:var(--text);
+  line-height: auto;
+}
+.container{max-width:980px;margin:36px auto;padding:0 20px;}
+header.site-header{display:flex;align-items:center;justify-content:space-between;padding:24px 0;}
+.site-title{font-size:1.25rem;font-weight:700;letter-spacing:0.2px;}
+nav a{color:var(--muted);text-decoration:none;margin-left:5px;font-weight:600}
+.hero{background:linear-gradient(180deg, rgba(14,165,164,0.08), transparent);padding:28px;border-radius:12px;display:flex;gap:20px;align-items:center;}
+.avatar{width:96px;height:96px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#7dd3fc);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px;}
+.hero .meta{flex:1}
+.section{background-color: var(--bg);margin-top:22px;background:var(--card);padding:20px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06);}
+.section h2{margin:0 0 10px 0;font-size:1.1rem}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;}
+.card{background:#fbfdff;padding:14px;border-radius:8px;border:1px solid rgba(15,23,42,0.03);}
+.card h3{margin:0 0 8px 0;font-size:1rem;}
+.card p{margin:0;font-size:0.9rem;color:var(--muted);}
+.button{width: auto; border: 2px solid rgba(255,255,255,0.447); backdrop-filter: blur(11px); display:inline-block;align-items: center; padding:30px 40px;border-radius:20px;background:#0b74ff;color:#fff;text-decoration:none;font-weight:600;margin-top:10px;}
+.contact-form{display:flex;flex-direction:column;gap:8px;}
+.input, textarea{padding:10px;border-radius:8px;border:1px solid #e6eef0;font-size:0.95rem}
+footer{margin:28px 0;text-align:center;color:var(--muted);font-size:0.9rem}
+@media (max-width:600px){.hero{flex-direction:column;align-items:flex-start}.site-title{font-size:1rem}}

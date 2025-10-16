@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Christian J Cruz — Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    :root {
+      --accent: #0b74ff;
+      --muted: #b0bec5;
+      --text-light: #f5f5f5;
+      --bg: #36454f;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-light);
+      font-family: "Inter", sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 2rem 0;
+    }
+
+    header.site-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .site-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    nav a {
+      color: var(--text-light);
+      margin-left: 1rem;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .avatar {
+      background: var(--accent);
+      color: #fff;
+      font-weight: bold;
+      font-size: 1.8rem;
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .meta h1 {
+      margin: 0 0 0.5rem 0;
+    }
+
+    .button {
+      display: inline-block;
+      background: #222;
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: background 0.3s;
+    }
+
+    .button:hover {
+      background: var(--accent);
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background: #445661;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.15);
+    }
+
+    .card h3, .card h2 {
+      margin-top: 0;
+      color: #fff;
+    }
+
+    .card p {
+      color: var(--text-light);
+    }
+
+    img {
+      border-radius: 8px;
+      margin: 8px;
+    }
+
+    @media (max-width: 600px) {
+      header.site-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 0.5rem;
+      }
+
+      .hero {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .meta {
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header class="site-header">
+      <div class="site-title">Christian — Computer Science • Networks & Security</div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#resume">Resume</a>
+      </nav>
+    </header>
+
+    <section class="hero section" id="about">
+      <div class="avatar">CJ</div>
+      <div class="meta">
+        <h1>Hi — I'm Christian, but you can call me Jeriel.</h1>
+        <p>
+          Master’s student in Computer Science (Networks & Security) with a strong interest in network design, cybersecurity, and system administration. I hold a Bachelor's Degree in Computer Technology and Networks, and I am actively developing my skills in programming and scripting.
+        </p>
+        <div style="margin-top:12px;">
+          <a class="button" href="Portfolio_2025.pdf" download>Download PDF Portfolio</a>
+          <a class="button" href="Resume2025.pdf" download style="background: var(--accent); margin-left: 8px;">Download Resume (PDF)</a>
+          <a class="button" href="https://ccruz429.github.io/CJTechServices/">CJ's Tech Services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="projects">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="card">
+          <h3>HexCalc iOS</h3>
+          <p><strong>Technologies:</strong> SwiftUI, Xcode</p>
+          <p><strong>Description:</strong></p>
+          <p>
+            HEXCalc is a minimalist iOS calculator designed to convert decimal numbers into hexadecimal format instantly. Built using SwiftUI and developed in Xcode, the app provides a clean, intuitive interface tailored for Computer Science students and professionals working with low-level programming or digital systems. The project demonstrates proficiency in SwiftUI layout design, state management, and user interface optimization for mobile platforms.
+          </p>
+          <a class="button" href="https://github.com/ccruz429/HEXCalcIOS/raw/refs/heads/main/HexCalc-IOS.zip" download>Download HEXCalc iOS (.zip)</a>
+        </div>
+
+        <div class="card">
+          <h3>HEXCalc iOS Preview</h3>
+          <img src="hex1.png" width="150" alt="HEXCalc preview 1">
+          <img src="hex2.png" width="150" alt="HEXCalc preview 2">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="resume">
+      <h2>Resume</h2>
+      <div class="projects-grid">
+        <div class="card">
+          <p><strong>Education:</strong> M.S. Computer Science (Networks & Security) Student — InterAmerican University of Puerto Rico, Guayama, PR (Expected Graduation: 2027)</p>
+          <p><strong>Skills:</strong> Network design, Cisco Packet Tracer, Linux administration, Python, Bash, Basic pentesting concepts</p>
+        </div>
+
+        <div class="card">
+          <p><strong>Education:</strong> Bachelor's Degree in Computer Technology & Networks — InterAmerican University of Puerto Rico, Guayama, PR (2018–2024)</p>
+          <p><strong>Skills:</strong> Computer repair, foundational programming, network topology design, IP address subnet management</p>
+        </div>
+
+        <div class="card">
+          <p><strong>Self-Taught Programmer — Independent Study (2023–Present)</strong></p>
+          <p><strong>Skills:</strong> HTML, CSS, Basic Python</p>
+          <a class="button" href="https://github.com/ccruz429">View GitHub</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
