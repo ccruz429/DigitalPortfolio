@@ -113,3 +113,7 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+button{
+    background-color: cyan;
+    border-radius: 5px;
+}
